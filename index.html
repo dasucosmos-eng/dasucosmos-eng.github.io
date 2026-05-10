@@ -3,52 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dasucosmos-eng - Portfolio</title>
+    <title>Your Name | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: #333; color: white; padding: 2rem; text-align: center; }
-        nav { background: #444; padding: 1rem; }
-        nav a { color: white; margin: 0 1rem; text-decoration: none; }
-        section { padding: 2rem; }
-        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-        .project { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+        }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Hi, I'm dasucosmos-eng</h1>
-        <p>Developer | Designer | Builder</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio. I'm passionate about creating amazing web experiences.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>A cool web app.</p>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-2xl font-semibold heading tracking-tight">YourName</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Another awesome project.</p>
+            <a href="#contact" class="px-5 py-2 bg-white text-zinc-900 rounded-full text-sm font-semibold hover:bg-zinc-200 transition">Get In Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-full text-sm">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    Available for freelance
+                </div>
+                <h1 class="text-6xl md:text-7xl font-semibold heading tracking-tighter leading-none">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">Your Name</span>
+                </h1>
+                <p class="text-2xl text-zinc-400">Full Stack Developer &amp; Designer</p>
+                <p class="text-lg text-zinc-400 max-w-md">Building beautiful digital experiences with modern web technologies.</p>
+                
+                <div class="flex gap-4">
+                    <a href="#projects" class="px-8 py-4 bg-white text-zinc-900 rounded-2xl font-semibold flex items-center gap-2 hover:scale-105 transition">
+                        View Projects <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border border-zinc-700 rounded-2xl font-semibold hover:bg-zinc-900 transition">Download CV</a>
+                </div>
+
+                <div class="flex gap-6 text-3xl pt-6">
+                    <a href="#" class="hover:text-violet-400 transition"><i class="fab fa-github"></i></a>
+                    <a href="#" class="hover:text-violet-400 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-violet-400 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-zinc-800 shadow-2xl">
+                    <img src="https://picsum.photos/id/64/800/800" alt="Profile" class="w-full h-full object-cover">
+                </div>
             </div>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: <a href="https://github.com/dasucosmos-eng">dasucosmos-eng</a></p>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-5">
+                    <h2 class="text-5xl heading font-semibold tracking-tight">About Me</h2>
+                </div>
+                <div class="md:col-span-7 space-y-6 text-zinc-300 text-lg leading-relaxed">
+                    <p>I'm a passionate developer with 5+ years of experience creating exceptional digital products. I love turning complex problems into simple, beautiful designs.</p>
+                    <p>Currently focused on building modern web applications using Next.js, Tailwind, and cloud technologies.</p>
+                    <div class="pt-6 grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="text-emerald-400 text-sm font-mono">CURRENTLY</div>
+                            <div class="mt-2 space-y-2">
+                                <div>Freelance Developer</div>
+                                <div>Based in India</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-emerald-400 text-sm font-mono">INTERESTS</div>
+                            <div class="mt-2 space-y-1">AI • Design Systems • Open Source • Travel Photography</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>&copy; 2026 dasucosmos-eng. All rights reserved.</p>
-    </footer>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl heading font-semibold tracking-tight mb-12">Skills &amp; Tools</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-violet-400 mb-4"><i class="fab fa-react text-4xl"></i></div>
+                    <div class="font-semibold text-xl">Frontend</div>
+                    <div class="text-zinc-400 mt-2">React • Next.js • Tailwind • TypeScript</div>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-emerald-400 mb-4"><i class="fas fa-server text-4xl"></i></div>
+                    <div class="font-semibold text-xl">Backend</div>
+                    <div class="text-zinc-400 mt-2">Node.js • Python • Django • PostgreSQL</div>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-amber-400 mb-4"><i class="fab fa-aws text-4xl"></i></div>
+                    <div class="font-semibold text-xl">Cloud &amp; DevOps</div>
+                    <div class="text-zinc-400 mt-2">AWS • Docker • GitHub Actions</div>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-rose-400 mb-4"><i class="fas fa-palette text-4xl"></i></div>
+                    <div class="font-semibold text-xl">Design</div>
+                    <div class="text-zinc-400 mt-2">Figma • Framer • UI/UX</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-5xl heading font-semibold tracking-tight">Featured Projects</h2>
+                <a href="#" class="text-sm flex items-center gap-2 hover:text-white">View all projects <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800 hover:border-violet-500/50 transition-all">
+                    <div class="h-64 bg-zinc-900 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://picsum.photos/id/201/800/600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-zinc-800 rounded-full">Next.js</span>
+                            <span class="text-xs px-3 py-1 bg-zinc-800 rounded-full">Tailwind</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">E-commerce Platform</h3>
+                        <p class="text-zinc-400 line-clamp-3">Modern full-stack e-commerce with Stripe payments, admin dashboard and real-time inventory.</p>
+                        <div class="mt-6 flex gap-4">
+                            <a href="#" class="text-sm font-medium flex items-center gap-1">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="text-sm font-medium flex items-center gap-1">Code <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800 hover:border-violet-500/50 transition-all">
+                    <div class="h-64 bg-zinc-900 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://picsum.photos/id/237/800/600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-zinc-800 rounded-full">AI</span>
+                            <span class="text-xs px-3 py-1 bg-zinc-800 rounded-full">Python</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">AI Content Generator</h3>
+                        <p class="text-zinc-400 line-clamp-3">SaaS tool that uses GPT-4 to generate marketing copy, blog posts and social media content.</p>
+                        <div class="mt-6 flex gap-4">
+                            <a href="#" class="text-sm font-medium flex items-center gap-1">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="text-sm font-medium flex items-center gap-1">Code <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800 hover:border-violet-500/50 transition-all">
+                    <div class="h-64 bg-zinc-900 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://picsum.photos/id/180/800/600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-zinc-800 rounded-full">Mobile</span>
+                            <span class="text-xs px-3 py-1 bg-zinc-800 rounded-full">Flutter</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Fitness Tracking App</h3>
+                        <p class="text-zinc-400 line-clamp-3">Cross-platform fitness app with workout plans, progress tracking and social features.</p>
+                        <div class="mt-6 flex gap-4">
+                            <a href="#" class="text-sm font-medium flex items-center gap-1">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="text-sm font-medium flex items-center gap-1">Code <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl heading font-semibold tracking-tight mb-6">Let's Work Together</h2>
+            <p class="text-xl text-zinc-400 max-w-md mx-auto">I'm always open to discussing new opportunities and interesting projects.</p>
+            
+            <div class="mt-12">
+                <a href="mailto:your@email.com" class="inline-flex items-center gap-3 bg-white text-zinc-950 px-10 py-6 rounded-3xl text-xl font-semibold hover:scale-105 transition">
+                    <i class="fas fa-envelope"></i>
+                    Say Hello
+                </a>
+            </div>
+            
+            <div class="mt-20 text-sm text-zinc-500">
+                © 2026 Your Name. Built with ❤️ and Tailwind CSS
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
